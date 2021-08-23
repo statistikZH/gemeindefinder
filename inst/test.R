@@ -11,4 +11,4 @@ ladestationen_coords <- tibble::tibble(
   tidyr::separate(Google,c("GKODE","GKODN"),sep=" ",convert=TRUE) %>%
   tibble::rownames_to_column()
 
-test <- add_bfsnr(ladestationen_coords, crs = 4326)
+test <- gemeindefinder::add_bfsnr(ladestationen_coords, crs = 4326)
