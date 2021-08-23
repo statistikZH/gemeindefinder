@@ -1,5 +1,9 @@
 #' Function to download the swissboundary shapes
 #'
+#' @param dest_dir path to destination
+#'
+#' @param which_date which date should be downloadedz, default is: "latest"
+#'
 #' @export
 download_gem_grenzen <- function(dest_dir, which_date = "latest"){
   download_links <- read.csv("https://ogd.swisstopo.admin.ch/resources/ch.swisstopo.swissboundaries3d-un5pTAlL.csv", header = F) %>%
@@ -14,7 +18,6 @@ download_gem_grenzen <- function(dest_dir, which_date = "latest"){
       dplyr::filter(., datum == max(datum)) else
         dplyr::filter(., datum == as.Date(which_date))
     }
-
 
   dest_dir <- paste0(dest_dir, file_dates$datum, "/")
 
