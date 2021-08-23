@@ -6,6 +6,11 @@
 \usage{
 download_gem_grenzen(dest_dir, which_date = "latest")
 }
+\arguments{
+\item{dest_dir}{path to destination}
+
+\item{which_date}{which date should be downloadedz, default is: "latest"}
+}
 \description{
 Function to download the swissboundary shapes
 }

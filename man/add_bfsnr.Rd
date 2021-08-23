@@ -6,6 +6,13 @@
 \usage{
 add_bfsnr(df, crs, datum = "latest")
 }
+\arguments{
+\item{df}{dataframe containing the coordinates which should be mapped to a bfsnr}
+
+\item{crs}{epsg number of the projection of the dataset}
+
+\item{datum}{datum as string, used to define which data should be used for the matching}
+}
 \description{
 add bfsnr to geocoordinates
 }
